@@ -1,0 +1,383 @@
+/*
+==============================
+  * CSS TABLE CONTENT *  
+==============================
+1. GOOGLE FONT
+2. VARIABLES CSS
+3. BASE
+4. REUSABLE CSS CLASSES
+5. HEADER & NAV
+6. BREAKPOINTS
+==============================
+  * END TABLE CONTENT *  
+==============================
+*/
+
+/*=============== GOOGLE FONTS ===============*/
+/* @import url('') */
+
+/*=============== VARIABLES CSS ===============*/
+:root { 
+  --header-height: 60px;
+  /*colores*/
+  --bg-primary: #fff;
+  --text-primary: #ee991a;
+  /*typografia*/
+  --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --big-font-size: 32px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --smaller-font-size: 12px;
+  /*grosor*/
+  --font-medium: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*margenes*/
+  --mr-1: 8px;
+  --mr-2: 16px;
+  --mr-3: 20px;
+  --mr-4: 26px;
+  --mr-5: 32px;
+  --mr-6: 75px;
+  /*z-index*/
+  --z-modal: 10;
+  --z-fixed: 100;
+  /*sombras*/
+  --box-shadow: 0px 1px 9px 1px rgba(255, 255, 255, 0.1);
+}
+@media  (min-width: 768px){
+  :root{
+    --header-height: 90px;
+
+  }
+}
+
+/*=============== BASE ===============*/
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--bg-primary);
+  color: var(--text-color, #ccc);
+  background-color: #000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CLASSES ===============*/
+.section {
+  padding: 32px 0;
+}
+
+.section__title {
+  margin: var(--mr-3) 0;
+}
+
+.grid--container {
+  max-width: 1024px;
+  display: grid;
+  margin: 0 var(--mr-3);
+}
+.btn {
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+.btn--primary {
+  background-color: #ccc;
+}
+.btn:hover {
+  transform: translateY(-4px);
+}
+/*=============== HEADER Y NAVBAR ===============*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: var(--z-fixed);
+  box-shadow: var(--box-shadow);
+}
+.navbar {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+
+.navbar__menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  background-color: #000;
+  border: 0px 1px 9px 2px #00000024;
+  padding: 4.5rem 1rem 2rem;
+  transition: .5s;
+  color: #ccc;
+}
+}
+
+.btn__close {
+  position: absolute;
+  top: var(--mr-2);
+  right: var(--mr-2);
+  color: #fff;
+  background-color: #000;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background .3s;
+}
+.btn__close:hover {
+  background-color: #eee;
+}
+.btn__open,
+.btn__close i {
+  font-size: 2.2rem;
+  
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.navbar__item {
+  margin: var(--mr-2);
+}
+.navbar__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ccc;
+  font-size: 1.2rem;
+  font-weight: var(--font-semi-bold);
+}
+.navbar__link:hover {
+ color: #fff ;
+}
+.show--menu {
+  top: 0;
+}
+.navbar__icon {
+  color: #fff;
+}
+/*=============== HOME ===============*/
+.home {
+  background-color: #000;
+}
+.home__container {
+  row-gap: 2rem;
+  padding: var(--header-height) 0 3rem;
+}
+.home__image {
+  margin: auto;
+  width: clamp(min (320px, 100%), 85vwvw, 445px);
+  height: auto;
+}
+.home__social {
+  display: flex;
+  justify-content: space-around; 
+}
+.home__social-link {
+  color: #ccc;
+  font-size: 2rem;
+}
+.home__social-link:hover {
+  color: #fff;
+}
+.home__title,
+.home__description {
+  text-align: center;
+}
+.home__title {
+  margin: 0;
+  margin-bottom: var(--mr-2);
+}
+.home__buttons {
+  text-align: center;
+}
+.section__title {
+  text-align: center;
+}
+.about__description{
+  text-align: center;
+}
+.about__tags-title{
+  
+  margin-top: var(--mr-6);
+
+  text-align: center;
+}
+.icon__css {
+  display: flex;
+  font-size: 4.5rem;
+  justify-content: center;
+}
+.icon__js{
+  display: flex;
+  font-size: 4.5rem;
+  justify-content: center;
+}
+.icon__html{
+  display: flex;
+  font-size: 4.5rem;
+  justify-content: center;
+  
+}
+.about__card-title {
+  text-align: center;
+  font-size: 20px;
+}
+.title__exp {
+  text-align: center;
+}
+.exp__about {
+  font-weight: var(--font-semi-bold);
+  font-size: 24px;
+  padding-top: 20px;
+}
+.exp__div {
+  margin-top: var(--mr-6);
+  padding-left: 20px; 
+}
+.contact__title {
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
+.contact__container {
+  display: flex;
+  justify-content: space-around; 
+}
+.phone__icon {
+  display: flex;
+  justify-content: center;
+  font-size: 4.5rem;
+}
+.mail__icon  {
+  display: flex;
+  justify-content: center;
+  font-size: 4.5rem;
+}
+.num__title {
+  font-weight: var(--font-semi-bold);
+  font-size: 16px;
+}
+.title__correo {
+  font-weight: var(--font-semi-bold);
+  font-size: 16px;
+}
+.projects__project {
+padding: 10px 0;
+}
+.project__image {
+  margin: auto;
+  max-width: 450px;
+  padding: 20px;
+}
+@media screen and (min-width: 768px){
+  .section {
+    padding: 6rem 0 5rem;
+  }
+.btn__open,
+.btn__close {
+    display: none;
+  }
+.navbar__list {
+    display: flex;
+    flex-direction: row;
+  }
+.header {
+  display: flex;
+  justify-content: center;
+}
+.home {
+  display: flex;
+  justify-content: center;
+}
+.home__info {
+  font-size: 30px;
+}
+.section__title {
+  font-size: 30px;
+}
+
+.about {
+  text-align: center;
+  margin: 0px 30px;
+}
+.about__description {
+  margin: 50px;
+}
+.htmlycss {
+  display: flex;
+  justify-content: space-around;
+
+}
+.divcss {
+  padding: inherit;
+  margin: inherit;
+}
+.divhtml {
+  padding: inherit;
+}
+.about__tags-title {
+  padding: 40px;
+}
+.exp__div {
+  text-align: center;
+}
+.exp__about {
+  padding: 40px;
+}
+
+.projects__container {
+  display: flex;
+}
+.projectimg {
+  display: flex;
+ max-width: 400px vw;
+ max-height: 270px;
+}
+ h2 {
+  font-size: 30px;
+ } 
+} 

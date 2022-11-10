@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">  
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Portafolio</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar grid--container">
+            
+            
+            <div class="navbar__menu ">
+                <i class='bx bx-x navbar__icon btn__close' ></i>
+                
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a class="navbar__link" href="#home">Inicio</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#about">Acerca de </a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#experience">Portafolio</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+                <i class='bx bx-menu navbar__icon btn__open'></i>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="home">
+            <div class="home__container grid--container">
+                <div class="home__image">
+                    <span></span>
+                    <img src="assets/img/prog.png" alt="profile photo">
+                </div>
+                <ul class="home__social">
+                    <li class="home__social-item"><a class="home__social-link" href=""><i class='bx bxl-linkedin'></i></a></li>
+                    <li class="home__social-item"><a class="home__social-link" href=""><i class='bx bxl-instagram'></i></a></li>
+                    <li class="home__social-item"><a class="home__social-link" href=""><i class='bx bxl-facebook'></i></a></li>
+                </ul>
+                <div class="home__info">
+                    <h1 class="home__title">Hey, soy Leandro <br> Wasinger</h1>
+                    <p class="home__description">
+                        Soy desarrollador web, apasionado por la tecnología y la programación.
+                    </p>
+                </div>
+               
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about section">
+            <h2 class="section__title">Acerca de mí</h2>
+            <div class="about__container">
+                <p class="about__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione itaque aspernatur excepturi quo voluptatum, nulla rem, ex facilis fugit illum rerum possimus, perspiciatis dolor! Dignissimos recusandae molestiae voluptate facilis velit!</p>
+                <div class="about__tags">
+                    <h2 class="about__tags-title">Habilidades</h2>
+                </div>
+                    <div class="about__cards">
+                        <div class="about__card">
+                            <div class="htmlycss">
+                            <div class="divhtml">
+                            <div class="icon__html">
+                            <i class='bx bxl-html5'></i>
+                            </div>
+                            <h3 class="about__card-title">HTML5</h3>
+                            </div>
+                            <div class="divcss">
+                            <div class="icon__css">
+                            <i class='bx bxl-css3' ></i>
+                            </div>
+                            <h3 class="about__card-title">CSS3</h3>
+                            </div>
+                            </div>
+                            <div class="icon__js">
+                                <i class='bx bxl-javascript' ></i>
+                            </div>
+                                <h3 class="about__card-title">Javascript</h3>
+                            
+                           
+                           
+                        </div>
+                    </div>
+                    
+                
+            </div>
+        </section>
+        <section id="experience" class="experience">
+            <div class="exp__div">
+                <h2 class="title__exp">Experiencia</h2>
+                <p class="exp__about">Academlo</p>
+                <p class="exp__in">2022 - 2023 Programador Junior</p>
+                <br>
+            </div>
+        </section>
+        <section id="projects" class="projects section">
+            <h2 class="section__title">Portafolio</h2>
+            <div class="projects__container">
+                
+                    
+                        <div class="project__image">
+                            <img src="assets/img/project1.jpg " alt="project1" class="projectimg">
+                        </div>
+                        <div class="project__image">
+                            <img src="assets/img/project2.png" alt="project2" class="projectimg">
+                        </div>
+                        <div class="project__image">
+                            <img src="assets/img/project3.jpg" alt="project3" class="projectimg">
+                        </div>
+
+                    
+                
+            </div>
+        </section>
+        <section id="contact" class="contact section">
+            <h2 class="contact__title">Contacto</h2>
+            <div class="contact__container ">
+                <div class="numberphone">
+                <i class='bx bxs-phone phone__icon'></i>
+                <p class="num__title">Número Telefónico</p>
+                <p class="num_digits">+1234567</p>
+                </div>
+                <div class="mailcorreo">
+                <i class='bx bxs-envelope mail__icon' ></i>
+                <p class="title__correo">Correo Electrónico</p>
+                <p class="example__correo">Leandro@correo.com</p>
+                </div>
+                
+            </div>
+            
+        </section>
+    </main>
+    <script>
+        const btnMenu = document.querySelector('.btn__open');
+        const btnClose = document.querySelector('.btn__close');
+        const Menu = document.querySelector('.navbar__menu');
+
+        btnMenu.onclick = function () {     
+            Menu.classList.add('show--menu')
+        };
+        btnClose.onclick = function () {
+            Menu.classList.remove('show--menu')
+        };
+    </script>
+</body>
+</html>
