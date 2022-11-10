@@ -170,8 +170,13 @@ img {
 }
 .btn__open,
 .btn__close i {
-  font-size: 2.2rem;
   
+  font-size: 2.2rem;
+ 
+}
+.grid--container{
+  display: grid;
+  justify-content: end;
 }
 .nav__list {
   display: flex;
